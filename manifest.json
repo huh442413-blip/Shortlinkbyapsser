@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "VidyaRays Auto Bypass",
+  "version": "1.0",
+  "description": "Automatically bypasses timer verification on VidyaRays and StreamFiles",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+    "*://*.vidyarays.com/*",
+    "*://*.streamfiles.eu.org/*",
+    "*://*.tipsguru.in/*",
+    "*://serox.vidyarays.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.vidyarays.com/*",
+        "*://serox.vidyarays.com/*",
+        "*://*.tipsguru.in/*",
+        "*://*.streamfiles.eu.org/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
