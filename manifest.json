@@ -2,13 +2,16 @@
   "manifest_version": 3,
   "name": "VidyaRays Auto Bypass",
   "version": "1.0",
-  "description": "Automatically bypasses timer verification on VidyaRays and StreamFiles",
+  "description": "Automatically bypasses timer verification on various shortlink sites",
   "permissions": ["activeTab", "scripting"],
   "host_permissions": [
     "*://*.vidyarays.com/*",
-    "*://*.streamfiles.eu.org/*",
     "*://*.tipsguru.in/*",
-    "*://serox.vidyarays.com/*"
+    "*://serox.vidyarays.com/*",
+    "*://*.lksfy.com/*",
+    "*://*.arolinks.com/*",
+    "*://*.gplinks.com/*",
+    "*://*.adrinolinks.com/*"
   ],
   "content_scripts": [
     {
@@ -16,7 +19,10 @@
         "*://*.vidyarays.com/*",
         "*://serox.vidyarays.com/*",
         "*://*.tipsguru.in/*",
-        "*://*.streamfiles.eu.org/*"
+        "*://*.lksfy.com/*",
+        "*://*.arolinks.com/*",
+        "*://*.gplinks.com/*",
+        "*://*.adrinolinks.com/*"
       ],
       "js": ["content.js"],
       "run_at": "document_end"
